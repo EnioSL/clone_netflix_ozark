@@ -1,0 +1,63 @@
+
+@use 'variaveis';
+
+.hero {
+    padding: 5vw;
+    min-height:80vh;
+    background-image: url('https://picsum.photos/id/1048/3016/1500');
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    display: block;
+
+    &__content {
+        max-width: 1048px;
+
+        &__branding {
+            max-width: 1048px;
+            margin: 0;
+        }
+
+        .title--big {
+            margin-bottom: 64px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-top: 60px;
+            }
+        }
+
+        &__combos {
+            display: flex;
+            justify-content: space-between;
+
+            &__combo {
+                width: calc(50% - 12px);
+                list-style: none;
+
+                img {
+                    max-height: 128px;
+                    margin-top: 2vw;
+                    
+                }
+
+                button {
+                    display: block;
+                    width: 100%;
+                    height: 60px;
+                    font-size: 18px;
+                    color: variaveis.$corTextoButton;
+                    background-color: #fff;
+                    text-transform: uppercase;
+                    border-radius: 4px;
+                    margin-top: 2vw;
+                    margin-bottom: 8px;
+                }
+
+            }
+        }
+    }
+}
