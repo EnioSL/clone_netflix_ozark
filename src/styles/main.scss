@@ -1,5 +1,6 @@
 @use 'variaveis';
 @use 'hero';
+@use 'plans';
 
 @font-face {
     font-family: Avenir;
@@ -36,26 +37,44 @@ body {
 }
 
 .text--big {
-    @include text(48px);
+    @include text(34px);
+    color: variaveis.$corTextoSecundario
 }
 
 .text {
-    @include text(36px);
+    @include text(24px);
+    color: variaveis.$corTextoSecundario
 }
 
 .text--small {
-    @include text(24px);
+    @include text(16px);
+    font-weight: bold;
+    color: variaveis.$corTextoSecundario
 }
 
 .title--big {
-    @include title(64px);
+    @include title(48px);
 }
 
 .title {
-    @include title(48px);
+    @include title(36px);
 }
 
 .title--small {
     @include title(24px);
+}
+
+.button {
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    color: variaveis.$corTextoButton;
+    background-color: #fff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
