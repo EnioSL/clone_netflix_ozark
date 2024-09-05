@@ -12,6 +12,11 @@
     padding: 0;
     justify-content: space-around;
 
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+
     &__content {
         max-width: 100%;
 

@@ -1,6 +1,9 @@
 @use 'variaveis';
 @use 'hero';
 @use 'plans';
+@use 'watch-anywhere';
+@use 'footer';
+@use 'header';
 
 @font-face {
     font-family: Avenir;
@@ -18,6 +21,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body {
@@ -33,23 +37,23 @@ body {
 
 @mixin title($fontSize: 24px) {
     @include text($fontSize);
-    color: variaveis.$corTextoSecundario;
+    color: variaveis.$corTextoPrincipal;
 }
 
 .text--big {
-    @include text(34px);
-    color: variaveis.$corTextoSecundario
+    @include text(18px);
+    color: variaveis.$corTextoPrincipal;
 }
 
 .text {
-    @include text(24px);
-    color: variaveis.$corTextoSecundario
+    @include text(14px);
+    color: variaveis.$corTextoPrincipal;
 }
 
 .text--small {
-    @include text(16px);
+    @include text(12px);
     font-weight: bold;
-    color: variaveis.$corTextoSecundario
+    color: variaveis.$corTextoPrincipal;
 }
 
 .title--big {
@@ -65,16 +69,42 @@ body {
 }
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 30px;
+    height: 40px;
     font-size: 18px;
     color: variaveis.$corTextoButton;
     background-color: #fff;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
-    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corFundoButtonPrimario;
+
+    &:hover {
+        background-color: lighten(variaveis.$corFundoButtonPrimario, 3%);
+    }
+
+    &--secondary {
+        background-color: variaveis.$corFundoButtonSecundario;
+        border-color: variaveis.$corFundoButtonSecundario;
+
+        &:hover {
+            background-color: lighten(variaveis.$corFundoButtonSecundario, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corFundoButtonDark, 0.8);
+        border-color: variaveis.$corFundoButtonSecundario;
+
+        &:hover {
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
 }
 
