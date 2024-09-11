@@ -12,6 +12,18 @@
     padding: 0;
     justify-content: space-around;
 
+    @media (max-width: 768px) {
+        
+        display: block;
+        text-align: justify;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+
+
     .button {
         margin-top: 2vw;
         margin-bottom: 8px;
@@ -23,6 +35,10 @@
         &__branding {
             max-width: 100%;
             margin: 0;
+
+            @media (max-width: 768px) {
+                max-width: 180px;
+            }
         }
 
         p {

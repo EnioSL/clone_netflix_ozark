@@ -4,17 +4,35 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     
+   
 
-
-    img {
-        width: 100%;
-        background-size: cover;
-        align-items: center;
     
-    }
-
     &__text_container {
         padding: 2vw;
+   
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: calc(50% - 5vw);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        @media (max-width: 768px) {
+            position: relative;
+            left: 0;
+            width: 100%;
+
+            img {
+                width: 100%;
+                background-size: cover;
+                align-items: center;
+            
+            }
+        }
 
         h2 {     
             margin-bottom: 50px;

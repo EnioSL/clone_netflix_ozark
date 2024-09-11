@@ -8,6 +8,10 @@
     transition: background-color .5s ease;
     z-index: 1;
 
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr 1rf 1fr;
+    }
+
     &--is-hidden {
         background-color: transparent;
         transition: background-color .5s ease;

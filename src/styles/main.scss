@@ -29,43 +29,62 @@ body {
     font-family: Avenir, sans-serif;
 }
 
-@mixin text($fontSize: 24px) {
-    font-size: $fontSize;
-    line-height: $fontSize + 10px;
-    color: variaveis.$corTextoPrincipal;
-}
-
-@mixin title($fontSize: 24px) {
-    @include text($fontSize);
-    color: variaveis.$corTextoPrincipal;
-}
-
 .text--big {
     @include text(18px);
     color: variaveis.$corTextoPrincipal;
+
+    @media (max-width: 768px) {
+        @include text(16px);
+    }
 }
 
 .text {
     @include text(14px);
     color: variaveis.$corTextoPrincipal;
+
+    @media (max-width: 768px) {
+        @include text(12px);
+    }
 }
 
 .text--small {
     @include text(12px);
     font-weight: bold;
     color: variaveis.$corTextoPrincipal;
+
+    @media (max-width: 768px) {
+        @include text(10px);
+    }
 }
 
 .title--big {
     @include title(48px);
+
+    @media (max-width: 768px) {
+        @include title(25px);
+        display: flex;
+        text-align: justify;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 0;
+
+    }
 }
 
 .title {
     @include title(36px);
+
+    @media (max-width: 768px) {
+        @include title(24px);
+    }
 }
 
 .title--small {
     @include title(24px);
+
+    @media (max-width: 768px) {
+        @include title(22px);
+    }
 }
 
 .button {
