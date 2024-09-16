@@ -4,7 +4,7 @@
 .hero {
     padding: 5vw;
     min-height:80vh;
-    background-image: url('http://picsum.photos/id/1048/3016/1500'); /*'http://picsum.photos/id/1048/3016/1500' */
+    background-image: url(../images/1048-3016x1500.jpg); /*'http://picsum.photos/id/1048/3016/1500' */
     text-align: center;
     background-size: cover;
     background-position: center;
@@ -23,31 +23,21 @@
 
     }
 
-
-    .button {
-        margin-top: 2vw;
-        margin-bottom: 8px;
-    }
-
     &__content {
-        max-width: 100%;
+        max-width: 640px;
 
         &__branding {
-            max-width: 100%;
-            margin: 0;
+            max-width: 512px;
+            margin: 0 auto 38px;
+        }
 
-            @media (max-width: 768px) {
-                max-width: 180px;
-            }
+        .title--small {
+            margin-bottom: 64px;
         }
 
         p {
-            margin: 0 133px;
+            margin: 20px;
             
-        }
-
-        .title--big {
-            margin-bottom: 34px;
         }
 
         .text--small {
