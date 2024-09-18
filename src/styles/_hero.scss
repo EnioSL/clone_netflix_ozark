@@ -13,14 +13,14 @@
     justify-content: space-around;
 
     @media (max-width: 768px) {
-        
-        display: block;
-        text-align: justify;
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-        margin: 0;
+        background-image: url(../images/1048-3016x1500.jpg);
+        padding-top: calc(50vw + 25px);
+        background-size: cover;
+    }
 
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
     }
 
     &__content {
@@ -29,10 +29,15 @@
         &__branding {
             max-width: 512px;
             margin: 0 auto 38px;
+
+            @media (max-width: 768px) {
+                max-width: 180px;
+            }
         }
 
         .title--small {
             margin-bottom: 64px;
+            text-align: justify;
         }
 
         p {

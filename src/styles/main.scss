@@ -21,6 +21,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
     list-style: none;
 }
 
@@ -69,7 +70,7 @@ body {
 
 .link-text {
     @include text(18px);
-    color: variaveis.$corTextoSecundario
+    color: variaveis.$corTextoSecundario;
 }
 
 .title--big {
@@ -110,7 +111,7 @@ body {
     height: 60px;
     font-size: 18px;
     color: variaveis.$corTextoButton;
-    background-color: #fff;
+    background-color: variaveis.$corFundoButtonPrimario;
     text-transform: uppercase;
     border-radius: 4px;
     text-decoration: none;
@@ -123,8 +124,8 @@ body {
     }
 
     &--secondary {
-        background-color: variaveis.$corFundoButtonSecundario;
-        border-color: variaveis.$corFundoButtonSecundario;
+        background-color: variaveis.$corFundoButtonPrimario;
+        border-color: variaveis.$corFundoButtonPrimario;
 
         &:hover {
             background-color: lighten(variaveis.$corFundoButtonSecundario, 3%);
@@ -133,7 +134,7 @@ body {
 
     &--dark {
         background-color: rgba(variaveis.$corFundoButtonDark, 0.8);
-        border-color: variaveis.$corFundoButtonSecundario;
+        border-color: variaveis.$corTextoSecundario;
 
         &:hover {
             background-color: variaveis.$corTextoSecundario;
@@ -141,4 +142,3 @@ body {
         }
     }
 }
-

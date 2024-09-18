@@ -3,43 +3,32 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    
-   
 
-    
+    @media (max-width: 768px) {
+        display: block;
+        margin-top: 40px;
+    }
+
+    img {
+        max-width: 100%;
+        position: relative;
+        left: 0;
+        width: 100%;
+        
+    }
+
     &__text_container {
-        padding: 2vw;
-   
-
-        position: absolute;
-        top: 0;
-        left: 50%;
-        height: 100%;
-        width: calc(50% - 5vw);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-
-        @media (max-width: 768px) {
-            position: relative;
-            left: 0;
-            width: 100%;
-
-            img {
-                width: 100%;
-                background-size: cover;
-                align-items: center;
-            
-            }
-        }
-
-        h2 {     
-            margin-bottom: 50px;
-        }
-
-        p {
-            text-align: justify;
+        padding: 0 2vw;
+        
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 24px;
+            text-align: center;
         }
     }
 }
+
+p {
+    text-align: justify;
+}
+
