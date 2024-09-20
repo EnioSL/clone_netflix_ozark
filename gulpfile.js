@@ -35,7 +35,7 @@ exports.default = gulp.parallel(styles, images, scripts);
 
 //Tarefa de watch que observa mudanças em arquivos .scss, imagens e scripts
 exports.watch = function() {
-    gulp.watch('./src/styles/*.scss', gulp.parallel(styles));
-    gulp.watch('./src/images/**/*', gulp.parallel(images));
-    gulp.watch('./src/scripts/*.js', gulp.parallel(scripts));
+    gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
+    gulp.watch('./src/images/**/*', gulp.parallel(images))
+    gulp.watch('./src/scripts/*.js', gulp.parallel(scripts))
 }
