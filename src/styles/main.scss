@@ -51,7 +51,7 @@ body {
 
 .text {
     @include text();
-    color: variaveis.$corTextoPrincipal;
+    color: variaveis.$corTextoSecundario;
 
     @media (max-width: 768px) {
         @include text(12px);
@@ -61,7 +61,8 @@ body {
 .text--small {
     @include text(12px);
     font-weight: bold;
-    color: variaveis.$corTextoPrincipal;
+    color: variaveis.$corTextoSecundario;
+    text-align: center;
 
     @media (max-width: 768px) {
         @include text(10px);
@@ -99,7 +100,8 @@ body {
     @include title(24px);
 
     @media (max-width: 768px) {
-        @include title(22px);
+        text-align: center;
+        @include title(16px);
     }
 }
 

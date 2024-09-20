@@ -25,6 +25,11 @@
             list-style: none;
             max-width: 640px;
             width:100%;
+
+            p {
+                text-align: center;
+                margin-top: 2vw;
+            }
             
             img {
                 height: 160px;
@@ -54,9 +59,6 @@
     }
 }
 
-p {
-    text-align: center;
-    margin-top: 2vw;
-}
+
 
 
